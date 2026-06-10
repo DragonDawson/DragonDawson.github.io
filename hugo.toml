@@ -1,0 +1,45 @@
+baseURL = 'https://dragonDawson.github.io/'
+locale = 'zh-cn'
+title = "Dawson's Blog"
+theme = 'PaperMod'
+defaultContentLanguage = 'zh'
+enableEmoji = true
+
+[params]
+  description = "一个 Java 开发者的 AI 学习之路"
+  author = 'Dawson'
+  dateFormat = '2006-01-02'
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+
+  [params.homeInfoParams]
+    Title = '你好，我是 Dawson'
+    Content = 'Java 开发者，正在探索 AI 世界。这里记录我的学习笔记、项目经验和技术思考。'
+
+  [[params.socialIcons]]
+    name = 'github'
+    title = 'GitHub'
+    url = 'https://github.com/DragonDawson'
+
+[menu]
+  [[menu.main]]
+    identifier = 'about'
+    name = '关于'
+    url = '/about/'
+    weight = 10
+  [[menu.main]]
+    identifier = 'archives'
+    name = '归档'
+    url = '/archives/'
+    weight = 20
+  [[menu.main]]
+    identifier = 'search'
+    name = '搜索'
+    url = '/search/'
+    weight = 30
