@@ -1,7 +1,7 @@
 ---
 title: "Spring Cloud 完整指南：架构、组件与实战"
-date: 2026-06-11
-lastmod: 2026-06-11
+date: 2026-06-10
+lastmod: 2026-06-10
 description: "Spring Cloud 生态系统详解，涵盖注册中心、网关、配置中心、远程调用、负载均衡、熔断降级、分布式事务等所有核心组件，附代码示例和实际场景。"
 tags: ["Spring", "Spring Cloud", "微服务", "Java", "架构", "Nacos", "Gateway", "Sentinel", "Seata"]
 ---
