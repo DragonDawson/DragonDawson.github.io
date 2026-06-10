@@ -4,6 +4,7 @@ title = "Dawson's Blog"
 theme = 'PaperMod'
 defaultContentLanguage = 'zh'
 enableEmoji = true
+pygmentsUseClasses = true
 
 [params]
   description = "一个 Java 开发者的 AI 学习之路"
@@ -15,31 +16,83 @@ enableEmoji = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowWordCount = true
-  ShowRssButtonInSectionTermList = true
+  ShowRssButtonInSectionTermList = false
   UseHugoToc = true
+  ShowLastMod = true
+  comments = false
+  ShowToc = true
+  TocOpen = false
+  hideMeta = false
+  mainSections = ["posts"]
 
-  [params.homeInfoParams]
-    Title = '你好，我是 Dawson'
-    Content = 'Java 开发者，正在探索 AI 世界。这里记录我的学习笔记、项目经验和技术思考。'
+  # Profile mode (简约高级的首页)
+  [params.profileMode]
+    enabled = true
+    title = "你好，我是 Dawson"
+    subtitle = "Java 开发者 · AI 学习者"
+    imageUrl = "" 
+    imageTitle = "avatar"
+    imageWidth = 120
+    imageHeight = 120
 
+    [[params.profileMode.buttons]]
+      name = "📝 最新文章"
+      url = "/posts/"
+    [[params.profileMode.buttons]]
+      name = "📖 关于我"
+      url = "/about/"
+
+  # Label
+  [params.label]
+    text = "Dawson's Blog"
+    icon = ""
+    iconHeight = 0
+
+  # Social icons
   [[params.socialIcons]]
     name = 'github'
     title = 'GitHub'
     url = 'https://github.com/DragonDawson'
+  [[params.socialIcons]]
+    name = 'email'
+    title = 'Email'
+    url = 'mailto:dragon.zbl@outlook.com'
+  [[params.socialIcons]]
+    name = 'rss'
+    title = 'RSS'
+    url = '/index.xml'
 
 [menu]
   [[menu.main]]
-    identifier = 'about'
-    name = '关于'
-    url = '/about/'
+    identifier = 'posts'
+    name = '文章'
+    url = '/posts/'
     weight = 10
+  [[menu.main]]
+    identifier = 'tags'
+    name = '标签'
+    url = '/tags/'
+    weight = 20
   [[menu.main]]
     identifier = 'archives'
     name = '归档'
     url = '/archives/'
-    weight = 20
+    weight = 30
   [[menu.main]]
     identifier = 'search'
     name = '搜索'
     url = '/search/'
-    weight = 30
+    weight = 40
+  [[menu.main]]
+    identifier = 'about'
+    name = '关于'
+    url = '/about/'
+    weight = 50
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
